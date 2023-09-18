@@ -1,0 +1,16 @@
+div.box{
+    background-color: #912323;
+    height: 74px;
+    width: 64px;
+    color: white;
+    border: 4px solid #ccc735;
+    text-align: center;
+    display: inline-block;
+    font-size: 100%;
+    vertical-align:text-top;
+    margin-top: 16px;
+}
+
+div.row{
+    text-align: center;
+}
