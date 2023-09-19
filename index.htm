@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Brandon Oakes' Projects</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <h1 class= "title1">Brandon Oakes' Projects</h1>
-        <p>Test text test</p>
-    </body>
+<head>
+    <title>Webcam Live Stream</title>
+</head>
+<body>
+    <video id="webcam" autoplay></video>
+
+    <script>
+        // Check for browser support
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices
+        .getUserMedia({ video: true }) // Access the webcam
+        .then(function (stream) {
+            var videoElement = document.getElementById("webcam");
+            videoElement.srcObject = stream; // Set the video stream as the source
+        })
+        .catch(function (error) {
+            console.error("Error accessing webcam:", error);
+        });
+} else {
+    console.error("getUserMedia not supported in this browser");
+}
+
+    </script>
+</body>
 </html>
